@@ -12,3 +12,10 @@ document.querySelectorAll('.nav a').forEach((link) => link.addEventListener('cli
 }));
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    nav.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+  }
+});
